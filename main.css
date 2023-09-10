@@ -83,7 +83,7 @@ footer {
     text-align: center;
 }
 
-.container div.text-box {
+main div.text-box {
     display: inline-block;
     width: 100%;
     max-width: 340px;

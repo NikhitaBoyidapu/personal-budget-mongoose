@@ -22,7 +22,7 @@ nav.menu ul li {
     display: inline-block;
 }
 
-div.menu ul li a {
+nav.menu ul li a {
     display: block;
     padding: 0 20px;
     line-height: 44px;
@@ -32,7 +32,7 @@ div.menu ul li a {
     margin: 0;
 }
 
-div.menu ul li a:hover  {
+nav.menu ul li a:hover  {
     background-color: white;
     color: #4d5791;
 }

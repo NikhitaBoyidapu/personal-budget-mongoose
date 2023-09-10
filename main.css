@@ -7,15 +7,15 @@ body {
     font-family: Tahoma, Arial;
 }
 
-div.menu {
+nav.menu {
     width: 100%;
     background-color: #4d5791;
     height: 44px;
     padding: 0 40px;
 }
 
-div.menu ul,
-div.menu ul li {
+nav.menu ul,
+nav.menu ul li {
     margin: 0;
     padding: 0 ;
     list-style: none;
@@ -73,7 +73,7 @@ div.hero h2 {
     display: inline-block;
 }
 
-.bottom {
+footer {
     height: 50px;
     background-color: #b4c6f0;
     padding: 40px;

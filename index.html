@@ -16,7 +16,7 @@
 <body>
 
 <!-- This is a Semantic HTML Change -->
-    <nav class="menu">
+    <nav >
         <ul>
             <li><a href="/">Homepage</a></li>
             <li><a href="/about.html">About</a></li>
@@ -24,15 +24,18 @@
             <li><a href="https://google.com">Google</a></li>
         </ul>
     </nav>
+    
+<!-- This is an A11y Change -->
+    <a href="#skiptomain" class="skip">Skip to Main Content</a>
 
 <!-- This is a Semantic HTML Change -->
-    <header class="hero">
+    <header >
         <h1>Personal Budget</h1>
         <h2>A personal-budget management app</h2>
     </header>
-    
+
 <!-- This is a Semantic HTML Change -->
-    <main class="container center">
+    <main class="center" id="skiptomain">
 
         <div class="page-area">
 
@@ -105,7 +108,7 @@
     </main>
 
     <!-- This is a Semantic HTML Change -->
-    <footer class="bottom">
+    <footer>
         <div class="center">
             All rights reserved &copy; Fabio Nolasco
         </div>

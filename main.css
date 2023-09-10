@@ -53,13 +53,13 @@ header h2 {
     margin: 0;
 }
 
-header.hero h1 {
+header h1 {
     color: #fff;
     font-size: 4.2em;
     margin-bottom: 20px;
 }
 
-header.hero h2 {
+header h2 {
     color: #4d5791;
 }
 
@@ -83,7 +83,7 @@ footer {
     text-align: center;
 }
 
-main div.text-box {
+main article {
     display: inline-block;
     width: 100%;
     max-width: 340px;
@@ -92,7 +92,7 @@ main div.text-box {
 }
 
 @media screen and (min-width: 768px) {
-    main .div.text-box {
+    main article {
         margin: 10px;
     }
 }

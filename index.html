@@ -16,7 +16,7 @@
 <body>
 
 <!-- This is an A11y Change -->
-    <nav role="navigation">
+    <nav role="navigation" aria-label="Navigation Tab">
         <ul>
             <li><a href="/">Homepage</a></li>
             <li><a href="/about.html">About</a></li>
@@ -38,8 +38,7 @@
     <main class="center" id="skiptomain">
 
         <div class="page-area">
-            
-<!-- This is an A11y Change -->
+            <!-- This is a Semantic HTML Change -->
             <article>
                 <h1>Stay on track</h1>
                 <p>
@@ -109,7 +108,8 @@
     </main>
 
     <!-- This is a Semantic HTML Change -->
-    <footer>
+    <!-- This is an A11y Change -->
+    <footer role="contentinfo">
         <div class="center">
             All rights reserved &copy; Fabio Nolasco
         </div>

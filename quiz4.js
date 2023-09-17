@@ -24,7 +24,7 @@ const budget = {
 },
 {
     title: 'Taxi',
-    budget: 30
+    budget: 50
 },
 {
     title: 'Concert',
@@ -32,7 +32,7 @@ const budget = {
 },
 {
     title: 'Movie',
-    budget: 20
+    budget: 50
 }
 ]};
 

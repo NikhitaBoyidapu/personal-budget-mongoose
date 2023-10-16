@@ -116,22 +116,16 @@
     <script src="https://d3js.org/d3.v6.js"></script>
     <script  src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js" integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js" integrity="sha512-SIMGYRUjwY8+gKg7nn9EItdD8LCADSDfJNutF9TPrvEo86sQmFMh6MyralfIyhADlajSxqc7G0gs7+MwWF/ogQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-     <script>
-        var dataSource={
+    <script>
+            var dataSource={
             datasets: [
                 {
                     data: [],
-                    backgroundColor: [
-                        '#ffcd56',
-                        '#ff6384',
-                        '#36a2eb',
-                        '#fd6b19',
-                    ],
+                    backgroundColor: [],
                 }
             ],
             labels: []
         };
-
         function createChart(){
             var ctx =document.getElementById("myChart").getContext("2d");
             var myPieChart = new Chart (ctx, {
@@ -141,7 +135,7 @@
         }
         
         function newChart() {
-            const width = 400,
+            const width = 450,
                 height = 400,
                 margin = 40;
             const radius = Math.min(width, height) / 2 - margin;
@@ -214,17 +208,17 @@
                     return (midangle < Math.PI ? 'start' : 'end');
                 });
         }
-
         
         function getBudget() {
             axios.get('http://localhost:3000/budget')
             .then(function (res) {
-                console.log(res);
-                for (var i = 0; i < res.data.myBudget.length; i++) {
-                    dataSource.datasets[0].data[i] = res.data.myBudget[i].budget;
-                    dataSource.labels[i] = res.data.myBudget[i].title;
+                 for (var i = 0; i < res.data.length; i++) {
+                  
+                 dataSource.datasets[0].data[i] = res.data[i].related_value;
+                 dataSource.datasets[0].backgroundColor[i] = res.data[i].color;
+                dataSource.labels[i] = res.data[i].title;
                 }
-                createChart();
+               createChart();
                 newChart(); 
             });
         }
